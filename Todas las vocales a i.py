@@ -27,18 +27,17 @@ def reset():
     print("Pulsa ESC para salir o ENTER enter para continuar")
     reset=True
     while reset:
-        if keyboard.is_pressed('esc'):
-            reset=False
-            exit
         if keyboard.is_pressed('enter'):
             reset=False
             print("Introduce un nuevo mensaje por teclado")
+        else:
+            print("Abortando programa") 
             
 #Programa principal y encargado de llamar al resto de funciones
 def main():
     men=""
     men=input()
-    print(f"Tu mensaje a transformar es: |{men}|?")
+    print(f"Tu mensaje a transformar es: =>  {men}  <= ?")
     print("Escribe Y/N (Yes/No) para continuar o pulsa cualquier otra tecla para salir")
     select1=input()
     if select1=='Y' or select1=='y' or select1=="Yes" or select1=="yes":

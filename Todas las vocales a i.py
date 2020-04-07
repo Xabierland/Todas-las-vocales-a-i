@@ -22,7 +22,7 @@ def transforma(men):
 
 #Resetea en caso de que asi se desee para que se pueda introducir otra frase.
 def reset():
-    print("Escribe Y (Yes) para repetir")
+    print("Escribe Y (Yes) para repetir o pulsa cualquier otra tecla para salir")
     select2=input()
     if select2=='Y' or select2=='y' or select2=="Yes" or select2=="yes":
         print("Introduce un nuevo mensaje por teclado")

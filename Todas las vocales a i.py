@@ -16,9 +16,9 @@ def transforma(men):
             men1[i]='I'
         
         i=i+1
-    men1="".join(men1)
-    print("El mensaje resultante de la transformacion es:")
-    print (men1)
+    escribir(men1)
+
+    
 
 #Resetea en caso de que asi se desee para que se pueda introducir otra frase.
 def reset():
@@ -31,7 +31,13 @@ def reset():
         print("Abortando programa")
         exit
 
-            
+def escribir(men):
+    men="".join(men)
+    print("El mensaje resultante de la transformacion es:")
+    print("=====================================================================================================================================================================")
+    print (men)
+    print("=====================================================================================================================================================================")
+
 #Programa principal y encargado de llamar al resto de funciones
 def main():
     men=input()
@@ -53,5 +59,5 @@ men=""
 main()
 
 #===========================================================================================================#
-# Version 1.0
+# Version 1.1
 # Eres libre de editar y distribuir este codigo como te plazca sin necesidad de dar credito a mi, su autor.

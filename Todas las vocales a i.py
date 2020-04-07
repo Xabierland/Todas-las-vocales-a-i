@@ -4,8 +4,6 @@
 # Mi Instagram: https://www.instagram.com/xabierland/
 
 # Libreias importadas
-import keyboard
-import time
 
 #Todo lo que escriba se transforma en 'I'
 def transforma(men):
@@ -24,18 +22,18 @@ def transforma(men):
 
 #Resetea en caso de que asi se desee para que se pueda introducir otra frase.
 def reset():
-    print("Pulsa ESC para salir o ENTER enter para continuar")
-    reset=True
-    while reset:
-        if keyboard.is_pressed('enter'):
-            reset=False
-            print("Introduce un nuevo mensaje por teclado")
-        else:
-            print("Abortando programa") 
+    print("Escribe Y (Yes) para repetir")
+    select2=input()
+    if select2=='Y' or select2=='y' or select2=="Yes" or select2=="yes":
+        print("Introduce un nuevo mensaje por teclado")
+        main()
+    else:
+        print("Abortando programa")
+        exit
+
             
 #Programa principal y encargado de llamar al resto de funciones
 def main():
-    men=""
     men=input()
     print(f"Tu mensaje a transformar es: =>  {men}  <= ?")
     print("Escribe Y/N (Yes/No) para continuar o pulsa cualquier otra tecla para salir")
@@ -51,6 +49,7 @@ def main():
 
 #Inicio       
 print("Introduce un mensaje por teclado")
+men=""
 main()
 
 #===========================================================================================================#
